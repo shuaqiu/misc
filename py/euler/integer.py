@@ -4,6 +4,9 @@
 #
 
 def prime(n):
+    '''
+    ' Test a number whether is a prime
+    '''
     if n <= 1:
         return False, n, n
     elif n == 2 or n == 3:
@@ -24,6 +27,19 @@ def prime(n):
         k += 1
     return True, n, k
 
+def factorize(n):
+    if n <= 3:
+        return [n]
+
+    factor = []
+    i = 2
+    while i <= n:
+        while n % i == 0:
+            factor.append(i)
+            n = n / i
+        i += 1
+    return factor
+
 def factors(n):
     import math
     small = [x for x in xrange(2, int(math.sqrt(n))) if n % x == 0]
@@ -32,4 +48,4 @@ def factors(n):
     return small
 
 def prime_factors(n):
-    return [x for x in reversed(sorted(factors(n))) if prime(x)[0] == True]
+    return [x for x in factors(n) if prime(x)[0] == True]

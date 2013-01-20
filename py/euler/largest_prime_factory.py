@@ -9,11 +9,16 @@
 # What is the largest prime factor of the number 600851475143 ?
 
 def calc_v1(n):
-    import Integer
+    '''
+    ' Wrong:
+    '
+    ' this function is wrong for some number.
+    '''
+    import integer
     for i in xrange(2, n + 1):
         if n % i == 0:
             parner = n / i
-            if Integer.prime(parner)[0]:
+            if integer.prime(parner)[0]:
                 return parner
 
 def calc_v2(n):
