@@ -9,6 +9,7 @@ set tabstop=4
 set t_Co=256
 
 " {{{ plugins management
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 " }}}
 
