@@ -8,13 +8,17 @@
 #
 # Find the sum of all the multiples of 3 or 5 below 1000.
 
+
 def calc_v1(n):
     return sum([x for x in xrange(1, n) if x % 3 == 0 or x % 5 == 0])
+
 
 def calc_v2(n):
     return sum(set([x for x in xrange(0, n, 3)]) | set([x for x in xrange(0, n, 5)]))
 
+
 funcs = dict([(name, func) for name, func in locals().items() if name.startswith("calc")])
+
 
 def main():
     import sys
@@ -25,7 +29,7 @@ def main():
     #    print func(int(n))
     #except NameError:
     #    print "undefined version of method:", version, "at", name
-    if funcs.has_key(version):
+    if version in funcs:
         print "version:", version, "result:",
         print funcs[version](int(n))
     else:

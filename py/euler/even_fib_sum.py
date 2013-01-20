@@ -10,14 +10,17 @@
 #
 # By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 
+
 def fib(n):
     a, b = 1, 1
     while b < n:
         yield b
         a, b = b, a + b
 
+
 def calc_v1(n):
     return sum([x for x in fib(n) if x % 2 == 0])
+
 
 def calc_v2(n):
     a, b, s = 1, 1, 0
@@ -26,7 +29,9 @@ def calc_v2(n):
         a, b = a + 2 * b, 2 * a + 3 * b
     return s
 
+
 funcs = dict([(name, func) for name, func in locals().items() if name.startswith("calc")])
+
 
 def main():
     import sys
@@ -37,7 +42,7 @@ def main():
     #    print func(int(n))
     #except NameError:
     #    print "undefined version of method:", version, "at", name
-    if funcs.has_key(version):
+    if version in funcs:
         print "version:", version, "result:",
         print funcs[version](int(n))
     else:

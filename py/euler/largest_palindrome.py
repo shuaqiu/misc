@@ -15,8 +15,9 @@ def palindrome(n):
         return True
     return False
 
+
 def calc_v1(digit_len):
-    min_num, max_num = int("9" + "0" * (digit_len - 1)), int("9" * digit_len) 
+    min_num, max_num = int("9" + "0" * (digit_len - 1)), int("9" * digit_len)
 
     max_palindrome, x, y = 0, 0, 0
     for i in xrange(max_num, min_num, -1):
@@ -25,6 +26,7 @@ def calc_v1(digit_len):
             if palindrome(product) and product > max_palindrome:
                 max_palindrome, x, y = product, i, j
     return max_palindrome, x, y
+
 
 def calc_v2(digit_len):
     min_num, max_num = int("9" + "0" * (digit_len - 1)), int("9" * digit_len)
@@ -42,17 +44,18 @@ def calc_v2(digit_len):
                 max_palindrome, x, y = product, i, j
     return max_palindrome, x, y
 
+
 funcs = dict([(name, func) for name, func in locals().items() if name.startswith("calc")])
+
 
 def main():
     import sys
     name, version, n = sys.argv
-    if funcs.has_key(version):
+    if version in funcs:
         print funcs[version](int(n))
     else:
         print "usage:", name, "<" + "|".join(sorted(funcs.keys())) + ">", "integer"
 
+
 if __name__ == "__main__":
     main()
-
-

@@ -8,10 +8,12 @@
 #
 # What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 
+
 def list_remove(src, to_remove):
     for e in to_remove:
         if e in src:
             src.remove(e)
+
 
 def calc_v1(n):
     import integer
@@ -28,18 +30,18 @@ def calc_v1(n):
         r *= i
     return r
 
+
 funcs = dict([(name, func) for name, func in locals().items() if name.startswith("calc")])
+
 
 def main():
     import sys
     name, version, n = sys.argv
-    if funcs.has_key(version):
+    if version in funcs:
         print funcs[version](int(n))
     else:
         print "usage:", name, "<" + "|".join(sorted(funcs.keys())) + ">", "integer"
 
+
 if __name__ == "__main__":
     main()
-
-
-

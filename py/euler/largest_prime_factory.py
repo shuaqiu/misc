@@ -8,6 +8,7 @@
 #
 # What is the largest prime factor of the number 600851475143 ?
 
+
 def calc_v1(n):
     '''
     ' Wrong:
@@ -21,6 +22,7 @@ def calc_v1(n):
             if integer.prime(parner)[0]:
                 return parner
 
+
 def calc_v2(n):
     '''
     ' each composite number n can be expreseed as a group of primes.
@@ -33,12 +35,14 @@ def calc_v2(n):
         i, p = i + 1, i
     return p
 
+
 funcs = dict([(name, func) for name, func in locals().items() if name.startswith("calc")])
+
 
 def main():
     import sys
     name, version, n = sys.argv
-    if funcs.has_key(version):
+    if version in funcs:
         print funcs[version](int(n))
     else:
         print "usage: python", name, "<" + "|".join(sorted(funcs.keys())) + ">", "integer"
