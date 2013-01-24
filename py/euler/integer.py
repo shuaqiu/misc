@@ -95,13 +95,11 @@ def factorize(n):
 
 def factors(n):
     '''
-    ' FIX: this function is wrong for some number, for example 8
     '''
     import math
-    small = [x for x in xrange(2, int(math.sqrt(n))) if n % x == 0]
-    big = [n / x for x in small]
-    small.extend(big)
-    return small
+    small = set([x for x in xrange(2, int(math.sqrt(n)) + 1) if n % x == 0])
+    big = set([n / x for x in small])
+    return small | big | set([1, n])
 
 
 def prime_factors(n):
