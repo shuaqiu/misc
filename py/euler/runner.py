@@ -15,17 +15,20 @@ def get_func(module_name, func_name):
     return None
 
 
-def run_int(module_name, func_name, n):
+def run(module_name, func_name, param):
     func = get_func(module_name, func_name)
     if func is None:
         print "not such function", func_name, "in module", module_name
 
-    return func(n)
-
-
-def run(module_name, func_name, param):
     if param.isdigit():
-        return run_int(module_name, func_name, int(param))
+        return func(int(param))
+    else:
+        import os
+        if os.path.isfile(param):
+            with open(param) as f:
+                rtn = func(f)
+            f.close()
+            return rtn
 
 
 def main():
