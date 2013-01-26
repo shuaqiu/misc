@@ -34,3 +34,12 @@
 [submodule "envconf/vim/bundle/supertab"]
 	path = envconf/vim/bundle/supertab
 	url = git://github.com/ervandew/supertab.git
+[submodule "envconf/vim/bundle/tagbar"]
+	path = envconf/vim/bundle/tagbar
+	url = git://github.com/majutsushi/tagbar.git
+[submodule "envconf/vim/bundle/nerdcommenter"]
+	path = envconf/vim/bundle/nerdcommenter
+	url = git://github.com/scrooloose/nerdcommenter.git
+[submodule "envconf/vim/bundle/neocomplcache"]
+	path = envconf/vim/bundle/neocomplcache
+	url = git://github.com/Shougo/neocomplcache.git

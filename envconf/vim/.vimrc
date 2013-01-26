@@ -36,11 +36,21 @@ call pathogen#helptags()
 
 " {{{ color scheme
 " colorscheme murphy
-colorscheme railscasts
+" colorscheme railscasts
 " colorscheme guardian
 
-" set background=dark
-" colorscheme solarized
+" set background=light
+set background=dark
+let g:solarized_termtrans=1
+let g:solarized_tercolors=256
+let g:solarized_contrast="high"
+let g:solarized_visibility="high"
+colorscheme solarized
+" }}}
+
+
+" {{{ tagbar settings
+nmap <F8> :TagbarToggle<CR>
 " }}}
 
 
