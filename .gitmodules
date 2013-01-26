@@ -1,5 +1,5 @@
-[submodule "envconf/zsh/on-my-zsh"]
-	path = envconf/zsh/on-my-zsh
+[submodule "envconf/zsh/oh-my-zsh"]
+	path = envconf/zsh/oh-my-zsh
 	url = git://github.com/robbyrussell/oh-my-zsh.git
 [submodule "envconf/vim/bundle/vim-pathogen"]
 	path = envconf/vim/bundle/vim-pathogen
