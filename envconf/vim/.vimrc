@@ -4,7 +4,9 @@ set expandtab
 set shiftwidth=4
 set tabstop=4
 set autoindent
+set bs=2
 set number
+set numberwidth=3
 " }}}
 
 
@@ -42,6 +44,10 @@ colorscheme railscasts
 " }}}
 
 
-" {{{ disable python folding
+" {{{ python mode settings
+"
+" {{{{ disable python folding
 let g:pymode_folding=0
+" }}}}
+
 " }}}

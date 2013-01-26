@@ -22,3 +22,15 @@
 [submodule "envconf/vim/bundle/github-colors"]
 	path = envconf/vim/bundle/github-colors
 	url = git://github.com/bonsaiben/github-colors.git
+[submodule "envconf/vim/bundle/ctrlp"]
+	path = envconf/vim/bundle/ctrlp
+	url = git://github.com/kien/ctrlp.vim.git
+[submodule "envconf/vim/bundle/tabular"]
+	path = envconf/vim/bundle/tabular
+	url = git://github.com/godlygeek/tabular.git
+[submodule "envconf/vim/bundle/delimitmate"]
+	path = envconf/vim/bundle/delimitmate
+	url = git://github.com/Raimondi/delimitMate.git
+[submodule "envconf/vim/bundle/supertab"]
+	path = envconf/vim/bundle/supertab
+	url = git://github.com/ervandew/supertab.git
