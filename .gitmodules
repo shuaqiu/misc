@@ -16,3 +16,9 @@
 [submodule "envconf/vim/bundle/syntastic"]
 	path = envconf/vim/bundle/syntastic
 	url = git://github.com/scrooloose/syntastic.git
+[submodule "envconf/vim/bundle/railscasts"]
+	path = envconf/vim/bundle/railscasts
+	url = git://github.com/vim-scripts/Railscasts-Theme-GUIand256color.git
+[submodule "envconf/vim/bundle/github-colors"]
+	path = envconf/vim/bundle/github-colors
+	url = git://github.com/bonsaiben/github-colors.git
