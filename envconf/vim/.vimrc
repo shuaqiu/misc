@@ -7,24 +7,41 @@ set autoindent
 set number
 " }}}
 
+
 " use 256 colors
 set t_Co=256
 
+
 " {{{ plugins management
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
+"
+" {{{{ if the pathogen is placed at ~/.vim/bundle
+" runtime bundle/vim-pathogen/autoload/pathogen.vim
+" call pathogen#infect()
+" }}}}
+"
+" {{{{ if the pathogen is placed at somewhere other than ~/.vim
+source ~/misc/envconf/vim/bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect('bundle/{}', '~/misc/envconf/vim/bundle/{}')
+" }}}}
+
 call pathogen#helptags()
 " }}}
+
 
 " set fileencodings=utf-8,gb2312,gbk,gb18030
 " set termencoding=utf-8
 
-" color scheme
+
+" {{{ color scheme
 " colorscheme murphy
 colorscheme railscasts
 " colorscheme guardian
+
 " set background=dark
 " colorscheme solarized
+" }}}
 
-" disable python folding
+
+" {{{ disable python folding
 let g:pymode_folding=0
+" }}}

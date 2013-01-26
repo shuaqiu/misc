@@ -1,3 +1,18 @@
 [submodule "envconf/zsh/on-my-zsh"]
 	path = envconf/zsh/on-my-zsh
 	url = git://github.com/robbyrussell/oh-my-zsh.git
+[submodule "envconf/vim/bundle/vim-pathogen"]
+	path = envconf/vim/bundle/vim-pathogen
+	url = git://github.com/tpope/vim-pathogen.git
+[submodule "envconf/vim/bundle/vim-colors-solarized"]
+	path = envconf/vim/bundle/vim-colors-solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "envconf/vim/bundle/nerdtree"]
+	path = envconf/vim/bundle/nerdtree
+	url = git://github.com/scrooloose/nerdtree.git
+[submodule "envconf/vim/bundle/python-mode"]
+	path = envconf/vim/bundle/python-mode
+	url = git://github.com/klen/python-mode.git
+[submodule "envconf/vim/bundle/syntastic"]
+	path = envconf/vim/bundle/syntastic
+	url = git://github.com/scrooloose/syntastic.git
