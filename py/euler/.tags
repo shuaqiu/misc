@@ -1,0 +1,71 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+calc_max_len	consecutive_prime_sum.py	/^def calc_max_len(n, primes):$/;"	f
+calc_v1	consecutive_prime_sum.py	/^def calc_v1(n):$/;"	f
+calc_v1	even_fib_sum.py	/^def calc_v1(n):$/;"	f
+calc_v1	highly_divisible_triangular_number.py	/^def calc_v1(n):$/;"	f
+calc_v1	large_sum.py	/^def calc_v1(file):$/;"	f
+calc_v1	largest_palindrome.py	/^def calc_v1(digit_len):$/;"	f
+calc_v1	largest_prime_factory.py	/^def calc_v1(n):$/;"	f
+calc_v1	largest_product_in_series.py	/^def calc_v1(s, substr_len=5):$/;"	f
+calc_v1	longest_collatz_sequence.py	/^def calc_v1(m):$/;"	f
+calc_v1	multiples_3_and_5.py	/^def calc_v1(n):$/;"	f
+calc_v1	power_digit_sum.py	/^def calc_v1(power):$/;"	f
+calc_v1	prime_at_10001.py	/^def calc_v1(n):$/;"	f
+calc_v1	smallest_multiple.py	/^def calc_v1(n):$/;"	f
+calc_v1	special_pythagorean_triplet.py	/^def calc_v1(n):$/;"	f
+calc_v1	sum_primes.py	/^def calc_v1(n):$/;"	f
+calc_v1	sum_square_diff.py	/^def calc_v1(n):$/;"	f
+calc_v2	even_fib_sum.py	/^def calc_v2(n):$/;"	f
+calc_v2	highly_divisible_triangular_number.py	/^def calc_v2(n):$/;"	f
+calc_v2	largest_palindrome.py	/^def calc_v2(digit_len):$/;"	f
+calc_v2	largest_prime_factory.py	/^def calc_v2(n):$/;"	f
+calc_v2	largest_product_in_series.py	/^def calc_v2(s, substr_len=5):$/;"	f
+calc_v2	longest_collatz_sequence.py	/^def calc_v2(m):$/;"	f
+calc_v2	multiples_3_and_5.py	/^def calc_v2(n):$/;"	f
+collatz_seq	longest_collatz_sequence.py	/^def collatz_seq(n):$/;"	f
+collatz_seq_v2	longest_collatz_sequence.py	/^def collatz_seq_v2(n, numbers):$/;"	f
+factorize	integer.py	/^def factorize(n):$/;"	f
+factors	integer.py	/^def factors(n):$/;"	f
+fib	even_fib_sum.py	/^def fib(n):$/;"	f
+funcs	even_fib_sum.py	/^funcs = dict([(name, func) for name, func in locals().items() if name.startswith("calc")])$/;"	v
+funcs	largest_palindrome.py	/^funcs = dict([(name, func) for name, func in locals().items() if name.startswith("calc")])$/;"	v
+funcs	largest_prime_factory.py	/^funcs = dict([(name, func) for name, func in locals().items() if name.startswith("calc")])$/;"	v
+funcs	multiples_3_and_5.py	/^funcs = dict([(name, func) for name, func in locals().items() if name.startswith("calc")])$/;"	v
+funcs	smallest_multiple.py	/^funcs = dict([(name, func) for name, func in locals().items() if name.startswith("calc")])$/;"	v
+funcs	sum_square_diff.py	/^funcs = dict([(name, func) for name, func in locals().items() if name.startswith("calc")])$/;"	v
+get_func	runner.py	/^def get_func(module_name, func_name):$/;"	f
+integer	consecutive_prime_sum.py	/^    import integer$/;"	i
+integer	highly_divisible_triangular_number.py	/^    import integer$/;"	i
+integer	largest_prime_factory.py	/^    import integer$/;"	i
+integer	prime_at_10001.py	/^    import integer$/;"	i
+integer	smallest_multiple.py	/^    import integer$/;"	i
+integer	sum_primes.py	/^    import integer$/;"	i
+list_remove	smallest_multiple.py	/^def list_remove(src, to_remove):$/;"	f
+main	even_fib_sum.py	/^def main():$/;"	f
+main	largest_palindrome.py	/^def main():$/;"	f
+main	largest_prime_factory.py	/^def main():$/;"	f
+main	multiples_3_and_5.py	/^def main():$/;"	f
+main	runner.py	/^def main():$/;"	f
+main	smallest_multiple.py	/^def main():$/;"	f
+main	sum_square_diff.py	/^def main():$/;"	f
+math	integer.py	/^    import math$/;"	i
+os	runner.py	/^        import os$/;"	i
+palindrome	largest_palindrome.py	/^def palindrome(n):$/;"	f
+prime	integer.py	/^def prime(n):$/;"	f
+prime_factors	integer.py	/^def prime_factors(n):$/;"	f
+primes	integer.py	/^def primes(n):$/;"	f
+run	runner.py	/^def run(module_name, func_name, param):$/;"	f
+square_sum	sum_square_diff.py	/^def square_sum(n):$/;"	f
+sum_square	sum_square_diff.py	/^def sum_square(n):$/;"	f
+sys	even_fib_sum.py	/^    import sys$/;"	i
+sys	largest_palindrome.py	/^    import sys$/;"	i
+sys	largest_prime_factory.py	/^    import sys$/;"	i
+sys	multiples_3_and_5.py	/^    import sys$/;"	i
+sys	runner.py	/^    import sys$/;"	i
+sys	smallest_multiple.py	/^    import sys$/;"	i
+sys	sum_square_diff.py	/^    import sys$/;"	i

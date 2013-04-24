@@ -43,3 +43,6 @@
 [submodule "envconf/vim/bundle/neocomplcache"]
 	path = envconf/vim/bundle/neocomplcache
 	url = git://github.com/Shougo/neocomplcache.git
+[submodule "envconf/erlang/rebar"]
+	path = envconf/erlang/rebar
+	url = git://github.com/rebar/rebar.git

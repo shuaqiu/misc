@@ -1,0 +1,124 @@
+
+! -*-{ scroll bar
+! scrollbar style - rxvt (default), plain (most compact), next, xterm
+URxvt.scrollstyle: rxvt
+! to deactiveted scrollbar, uncommont this
+! URxvt.scrollBar: false
+URxvt.scrollBar_right: true
+
+URxvt.saveLines: 5000
+! -*-}
+
+! -*-{ font 
+URxvt.font: xft:monaco:size=11,xft:"WenQuanyi Zen Hei Mono":size=11
+! -*-}
+
+! -*-{ input style for input method - OverTheSpot, OffTheSpot, Root
+URxvt.preeditType: Root
+! URxvt.imLocale: zh_CN.UTF-8
+URxvt.inputMethod: ibus 
+! -*-}
+
+! -*-{ Xft settings
+Xft*dpi: 96
+Xft*antialias: true
+Xft*hinting: Full
+! -*-}
+
+! -*-{ color theme
+URxvt.depth: 32
+! URxvt.background: rgba: 3f00/3f00/3f00/dddd
+! URxvt.background: [95]#000000
+URxvt.background: [90]#0f0f0f
+URxvt.foreground: #c8c8c8
+
+! black
+URxvt.color0:  #251f1f
+URxvt.color8:  #5e5e5e
+! red
+URxvt.color1:  #eb4509
+URxvt.color9:  #eb4509
+! green
+URxvt.color2:  #94e76b
+URxvt.color10: #95e76b
+! yellow
+URxvt.color3:  #ffac18
+URxvt.color11: #ffac18
+! blue
+URxvt.color4:  #46aede
+URxvt.color12: #46aede
+! magenta
+URxvt.color5:  #e32c57
+URxvt.color13: #e32c57
+! cyan
+URxvt.color6:  #d6dbac
+URxvt.color14: #d6dbac
+! white
+URxvt.color7:  #efefef
+URxvt.color15: #efefef
+
+! ! -*-{{ Tango Colors
+! ! black
+! URxvt.color0:  #2E3436
+! URxvt.color8:  #555753
+! ! red
+! URxvt.color1:  #a40000
+! URxvt.color9:  #EF2929
+! ! green
+! URxvt.color2:  #4E9A06
+! URxvt.color10: #8AE234
+! ! yellow
+! URxvt.color3:  #C4A000
+! URxvt.color11: #FCE94F
+! ! blue
+! URxvt.color4:  #3465A4
+! URxvt.color12: #729FCF
+! ! purple
+! URxvt.color5:  #75507B
+! URxvt.color13: #AD7FA8
+! ! orange (replaces cyan)
+! URxvt.color6:  #ce5c00
+! URxvt.color14: #fcaf3e
+! ! white
+! URxvt.color7:  #babdb9
+! URxvt.color15: #EEEEEC
+! ! -*-}}
+
+
+! -*-}
+
+
+! -*-{ window size
+! URxvt.geometry: 160x60
+URxvt.geometry: 120x45
+! -*-}
+
+
+
+! -*-{ perl extensions
+URxvt.perl-ext-common: default,tabbed,keyboard-select,clipboard,fullscreen
+
+! -*-{{ tabbed
+URxvt.tabbed.tabbar-fg: 2
+URxvt.tabbed.tabbar-bg: 0
+URxvt.tabbed.tab-fg: 3
+URxvt.tabbed.tab-bg: 0
+! -*-}}
+
+! -*-{{ keyboard-select
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-s: perl:keyboard-select:search
+! -*-}}
+
+! -*-{{ clipboard
+! URxvt.clipboard.autocopy: true
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+! -*-}}
+
+! -*-{{ fullscreen
+URxvt.keysym.F11: perl:fullscreen:switch
+! -*-}}
+
+! -*-}

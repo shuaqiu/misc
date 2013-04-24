@@ -30,8 +30,8 @@ call pathogen#helptags()
 " }}}
 
 
-" set fileencodings=utf-8,gb2312,gbk,gb18030
-" set termencoding=utf-8
+set fileencodings=utf-8,ucs-bom,gb2312,gbk,gb18030
+set termencoding=utf-8
 
 
 " {{{ color scheme

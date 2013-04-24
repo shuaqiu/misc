@@ -34,4 +34,3 @@ sum([], N)
 % total version 2
 totalV2(L)
     -> lists:sum(map(fun({What, Count}) -> cost(What) * Count end, L)).
-
