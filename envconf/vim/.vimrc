@@ -36,16 +36,16 @@ set termencoding=utf-8
 
 " {{{ color scheme
 " colorscheme murphy
-" colorscheme railscasts
+colorscheme railscasts
 " colorscheme guardian
 
 " set background=light
-set background=dark
-let g:solarized_termtrans=1
-let g:solarized_tercolors=256
-let g:solarized_contrast="high"
-let g:solarized_visibility="high"
-colorscheme solarized
+" set background=dark
+" let g:solarized_termtrans=1
+" let g:solarized_tercolors=256
+" let g:solarized_contrast="high"
+" let g:solarized_visibility="high"
+" colorscheme solarized
 " }}}
 
 
