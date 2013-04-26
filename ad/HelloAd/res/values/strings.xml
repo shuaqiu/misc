@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">HelloAdt</string>
-    <string name="title_section3">Section 3</string>
+    <string name="ui_test">UI Test</string>
     <string name="listview_test">ListViewTest</string>
     <string name="network_test">NetworkTest</string>
     <string name="hello_world">Hello world!</string>
@@ -12,5 +12,12 @@
     <string name="go">Go</string>
     <string name="add">add</string>
     <string name="todo">to do ...</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_activity_action_bar">ActionBarActivity</string>
+    <string name="home">home</string>
+    <string name="at_me">\@me</string>
+    <string name="comments">comments</string>
+    <string name="messages">messages</string>
 
 </resources>

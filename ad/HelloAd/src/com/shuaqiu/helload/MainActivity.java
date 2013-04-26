@@ -1,4 +1,4 @@
-package com.shuaqiu.helload.networktest;
+package com.shuaqiu.helload;
 
 
 import java.util.ArrayList;
@@ -7,7 +7,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.shuaqiu.helload.uitest.ActionBarTestActivity.DummySectionFragment;
+
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -18,6 +21,7 @@ import android.text.Editable;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
@@ -28,8 +32,6 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
-
-import com.shuaqiu.helload.R;
 
 public class MainActivity extends FragmentActivity {
 
@@ -76,6 +78,11 @@ public class MainActivity extends FragmentActivity {
 	 * one of the sections/tabs/pages.
 	 */
 	public class SectionsPagerAdapter extends FragmentPagerAdapter {
+		private int[] pageTitile = new int[]
+				{R.string.network_test, R.string.listview_test, R.string.ui_test};
+		private Class<?>[] itemClass = new Class<?>[]{
+				NetworkTestFragment.class, ListViewFragment.class, JumpFragment.class
+		};
 
 		public SectionsPagerAdapter(FragmentManager fm) {
 			super(fm);
@@ -86,17 +93,17 @@ public class MainActivity extends FragmentActivity {
 			// getItem is called to instantiate the fragment for the given page.
 			// Return a DummySectionFragment (defined as a static inner class
 			// below) with the page number as its lone argument.
-			if(position == 0){
-				return new NetworkTestFragment();
-			}
-			if(position == 1){
-				return new ListViewFragment();
+			try {
+				return (Fragment) itemClass[position].newInstance();
+			} catch (InstantiationException e) {
+				e.printStackTrace();
+			} catch (IllegalAccessException e) {
+				e.printStackTrace();
 			}
 			
 			Fragment fragment = new DummySectionFragment();
 			Bundle args = new Bundle();
 			args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position + 1);
-			
 			fragment.setArguments(args);
 			return fragment;
 		}
@@ -104,20 +111,12 @@ public class MainActivity extends FragmentActivity {
 		@Override
 		public int getCount() {
 			// Show 3 total pages.
-			return 3;
+			return pageTitile.length;
 		}
 
 		@Override
 		public CharSequence getPageTitle(int position) {
-			switch (position) {
-			case 0:
-				return getString(R.string.network_test);
-			case 1:
-				return getString(R.string.listview_test);
-			case 2:
-				return getString(R.string.title_section3);
-			}
-			return null;
+			return getString(pageTitile[position]);
 		}
 	}
 
@@ -156,6 +155,7 @@ public class MainActivity extends FragmentActivity {
 	public static class NetworkTestFragment extends Fragment {
 		
 		public NetworkTestFragment() {
+			System.err.println("new NetworkTestFragment");
 		}
 		
 		@Override
@@ -180,6 +180,11 @@ public class MainActivity extends FragmentActivity {
 	}
 	
 	public static class ListViewFragment extends Fragment{
+		
+		public ListViewFragment() {
+			System.err.println("new ListViewFragment");
+		}
+		
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container,
 				Bundle savedInstanceState) {
@@ -226,4 +231,46 @@ public class MainActivity extends FragmentActivity {
 		}
 	}
 
+	public static class JumpFragment extends Fragment{
+		
+		public JumpFragment() {
+			System.err.println("new JumpFragment");
+		}
+		
+		@Override
+		public View onCreateView(LayoutInflater inflater, ViewGroup container,
+				Bundle savedInstanceState) {
+			ListView listView = new ListView(getActivity());
+			
+			String[] fromFields = new String[]{"activity", "description"};
+			int[] toIds = new int[]{android.R.id.text1, android.R.id.text2};
+			final List<Map<String, Object>> datas = getListItemDatas();
+			final SimpleAdapter itemsAdapter = new SimpleAdapter(getActivity(), datas, android.R.layout.two_line_list_item, fromFields, toIds);
+			listView.setAdapter(itemsAdapter);
+			
+			listView.setOnItemClickListener(new OnItemClickListener() {
+				@Override
+				public void onItemClick(AdapterView<?> parent, View view,
+						int position, long id) {
+					Map<String, Object> data = datas.get(position);
+					Intent intent = new Intent(getActivity(), (Class<?>) data.get("class"));
+					startActivity(intent);
+				}
+			});
+			
+			return listView;
+		}
+		
+		private List<Map<String, Object>> getListItemDatas(){
+			final List<Map<String, Object>> datas = new ArrayList<Map<String, Object>>();
+			
+			Map<String, Object> data = new HashMap<String, Object>();
+			data.put("activity", "ActionBarTestActivity");
+			data.put("description", "test action bar");
+			data.put("class", com.shuaqiu.helload.uitest.ActionBarTestActivity.class);
+			datas.add(data);
+			
+			return datas;
+		}
+	}
 }
