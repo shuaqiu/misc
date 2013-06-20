@@ -28,7 +28,8 @@
         </activity>
         <activity
             android:name="com.shuaqiu.helload.uitest.ActionBarTestActivity"
-            android:label="@string/title_activity_action_bar" >
+            android:label="@string/title_activity_action_bar"
+            android:uiOptions="splitActionBarWhenNarrow" >
         </activity>
     </application>
 
