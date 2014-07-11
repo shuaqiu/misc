@@ -3,5 +3,7 @@
 ## prompt
 autoload -U promptinit
 promptinit
-prompt gentoo
+
+t=`prompt -l | grep gentoo | wc -l`
+[[ $t = 1 ]] && prompt gentoo
 
