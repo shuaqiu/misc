@@ -13,6 +13,10 @@ some misc codes
   ```sh
   # at home, eg. /home/shuaqiu
   git clone --recursive https://github.com/shuaqiu/misc.git
+
+  # or
+  git clone https://github.com/shuaqiu/misc.git
+  git submodule update --init--recursive
   ```
 
 2. install
