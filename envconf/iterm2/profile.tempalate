@@ -1,0 +1,17 @@
+#!/usr/bin/expect -f
+
+set user arch
+set host 192.168.56.2
+set password $user
+set timeout -1
+
+spawn ssh $user@$host
+expect {
+    "(yes/no)?"
+    {send "yes\n";exp_continue}
+    "password:"
+    {send "$password\n"}
+}
+interact
+expect eof
+
